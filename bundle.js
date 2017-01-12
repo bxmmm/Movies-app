@@ -30152,7 +30152,7 @@
 					_react2.default.createElement(
 						'form',
 						{ onSubmit: this.handleSubmit },
-						_react2.default.createElement('input', { onChange: this.handleChange, value: this.state.searchTerm, className: 'form-control', type: 'text', placeholder: 'Search for a TV Show' })
+						_react2.default.createElement('input', { onChange: this.handleChange, value: this.state.searchTerm, className: 'form-control', type: 'text', placeholder: 'Find Movies/TV Shows' })
 					)
 				);
 			}
@@ -30507,11 +30507,7 @@
 			key: 'render',
 			value: function render() {
 				if (!this.props.foundMovie && !this.props.foundSerie) {
-					return _react2.default.createElement(
-						'div',
-						null,
-						'NEMA'
-					);
+					return _react2.default.createElement('div', null);
 				}
 				if (this.props.foundMovie) {
 					return _react2.default.createElement(

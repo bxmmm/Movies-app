@@ -33,7 +33,7 @@ class Form extends Component {
 		return (
 			<div>
 				<form onSubmit={this.handleSubmit}>
-					<input onChange={this.handleChange} value={this.state.searchTerm} className='form-control' type='text' placeholder='Search for a TV Show'/>
+					<input onChange={this.handleChange} value={this.state.searchTerm} className='form-control' type='text' placeholder='Find Movies/TV Shows'/>
 				</form>
 			</div>
 		);

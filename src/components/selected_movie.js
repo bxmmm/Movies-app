@@ -15,7 +15,7 @@ class SelectedMovie extends Component {
 	render() {
 		if(!this.props.foundMovie && !this.props.foundSerie) {
 			return (
-					<div>NEMA</div>
+					<div></div>
 			);
 		}
 		if(this.props.foundMovie) {
