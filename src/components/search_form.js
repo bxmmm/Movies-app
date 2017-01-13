@@ -21,8 +21,10 @@ class Form extends Component {
 		event.preventDefault();
 		if(this.props.search === 'movies') {
 			this.props.searchMovie(this.state.searchTerm);
+			this.setState({ searchTerm: ''});
 		} else {
 			this.props.searchSeries(this.state.searchTerm);
+			this.setState({ searchTerm: ''});
 		}
 
 	}

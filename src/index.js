@@ -9,7 +9,7 @@ import App from './components/app';
 import Movies from './components/movies';
 import TvShows from './components/tv_shows';
 import reducers from './reducers';
-import SelectedMovie from './components/selected_movie';
+import SelectedItem from './components/selected_item';
 
 const createStoreWithMiddleware = applyMiddleware(ReduxPromise)(createStore);
 
@@ -18,9 +18,9 @@ ReactDOM.render(
   	<Router history={browserHistory}>
   		<Route path='/' component={App}>
   			<IndexRoute component={Movies}/>
-  			<Route path='movies/:id' component={SelectedMovie}/>
+  			<Route path='movies/:id' component={SelectedItem}/>
   			<Route path='tvshows' component={TvShows}/>
-        <Route path='tvshows/:id' component={SelectedMovie}/>
+        <Route path='tvshows/:id' component={SelectedItem}/>
   		</Route>
   	</Router>
   </Provider>

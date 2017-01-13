@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Item from './item';
-import SearchForm from './search_form_test';
+import SearchForm from './search_form';
 
 class TvShows extends Component {
 	top10Shows (serie) {
