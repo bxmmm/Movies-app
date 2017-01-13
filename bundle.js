@@ -87,9 +87,9 @@
 
 	var _reducers2 = _interopRequireDefault(_reducers);
 
-	var _selected_movie = __webpack_require__(307);
+	var _selected_item = __webpack_require__(307);
 
-	var _selected_movie2 = _interopRequireDefault(_selected_movie);
+	var _selected_item2 = _interopRequireDefault(_selected_item);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -105,9 +105,9 @@
 	                  _reactRouter.Route,
 	                  { path: '/', component: _app2.default },
 	                  _react2.default.createElement(_reactRouter.IndexRoute, { component: _movies2.default }),
-	                  _react2.default.createElement(_reactRouter.Route, { path: 'movies/:id', component: _selected_movie2.default }),
+	                  _react2.default.createElement(_reactRouter.Route, { path: 'movies/:id', component: _selected_item2.default }),
 	                  _react2.default.createElement(_reactRouter.Route, { path: 'tvshows', component: _tv_shows2.default }),
-	                  _react2.default.createElement(_reactRouter.Route, { path: 'tvshows/:id', component: _selected_movie2.default })
+	                  _react2.default.createElement(_reactRouter.Route, { path: 'tvshows/:id', component: _selected_item2.default })
 	            )
 	      )
 	), document.querySelector('.container'));
@@ -28306,9 +28306,9 @@
 
 	var _item2 = _interopRequireDefault(_item);
 
-	var _search_form_test = __webpack_require__(298);
+	var _search_form = __webpack_require__(298);
 
-	var _search_form_test2 = _interopRequireDefault(_search_form_test);
+	var _search_form2 = _interopRequireDefault(_search_form);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -28344,14 +28344,14 @@
 					return _react2.default.createElement(
 						'div',
 						null,
-						_react2.default.createElement(_search_form_test2.default, { search: 'movies' })
+						_react2.default.createElement(_search_form2.default, { search: 'movies' })
 					);
 				}
 				if (!this.props.movies) {
 					return _react2.default.createElement(
 						'div',
 						null,
-						_react2.default.createElement(_search_form_test2.default, { search: 'movies' }),
+						_react2.default.createElement(_search_form2.default, { search: 'movies' }),
 						_react2.default.createElement(
 							'div',
 							{ className: 'row movies-border' },
@@ -28362,7 +28362,7 @@
 				return _react2.default.createElement(
 					'div',
 					null,
-					_react2.default.createElement(_search_form_test2.default, { search: 'movies' }),
+					_react2.default.createElement(_search_form2.default, { search: 'movies' }),
 					_react2.default.createElement(
 						'div',
 						{ className: 'row movies-border' },
@@ -30134,8 +30134,10 @@
 				event.preventDefault();
 				if (this.props.search === 'movies') {
 					this.props.searchMovie(this.state.searchTerm);
+					this.setState({ searchTerm: '' });
 				} else {
 					this.props.searchSeries(this.state.searchTerm);
+					this.setState({ searchTerm: '' });
 				}
 			}
 		}, {
@@ -30189,9 +30191,9 @@
 
 	var _item2 = _interopRequireDefault(_item);
 
-	var _search_form_test = __webpack_require__(298);
+	var _search_form = __webpack_require__(298);
 
-	var _search_form_test2 = _interopRequireDefault(_search_form_test);
+	var _search_form2 = _interopRequireDefault(_search_form);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -30228,13 +30230,13 @@
 						return _react2.default.createElement(
 							'div',
 							null,
-							_react2.default.createElement(_search_form_test2.default, null)
+							_react2.default.createElement(_search_form2.default, null)
 						);
 					}
 					return _react2.default.createElement(
 						'div',
 						null,
-						_react2.default.createElement(_search_form_test2.default, null),
+						_react2.default.createElement(_search_form2.default, null),
 						_react2.default.createElement(
 							'div',
 							{ className: 'row movies-border' },
@@ -30245,7 +30247,7 @@
 				return _react2.default.createElement(
 					'div',
 					null,
-					_react2.default.createElement(_search_form_test2.default, null),
+					_react2.default.createElement(_search_form2.default, null),
 					_react2.default.createElement(
 						'div',
 						{ className: 'row movies-border' },
